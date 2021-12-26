@@ -39,15 +39,16 @@
  .../ZingSTM/laravelPHP $ composer install
 ```
 
-##### 4. After installing the neccessary packages, rename the ".env.example" file into ".env" | or add a new file ".env" with the same content in ".env.example"
+##### 4. After installing the neccessary packages, rename the ".env.example" file into ".env" | or add a new file ".env" with the same content in ".env.example". Then create a APP_KEY, create db ZingSTM in http://localhost/phpmyadmin/ and add table in database
 ```
  .../ZingSTM/laravelPHP $ (sudo) cp env.example .env
+ .../ZingSTM/laravelPHP $ php artisan key:generate
+ .../ZingSTM/laravelPHP $ php artisan migrate
 ```
 * Then, change DB_DATABASE corresponding to your database name in Xampp
 
-##### 5. Then create a APP_KEY. Finally, try "php artisan serve" 
+##### 5. Finally, try "php artisan serve" 
 ```
- .../ZingSTM/laravelPHP $ php artisan key:generate
  .../ZingSTM/laravelPHP $ php artisan serve
 ```
 
